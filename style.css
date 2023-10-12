@@ -1,0 +1,142 @@
+
+/*Padding: Padding refers to the space between the content (text or images) within an HTML element */
+/* Margin: Margin refers to the space outside of an HTML element, between the element's border and neighboring elements. */
+/* tex-decoration: adds a line to bottom or above the texts */
+
+*{
+    padding: 0%;
+    margin: 0%;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* The backgroung of the nav-bar is set to blue */
+nav{
+    background: #0082e6;
+    height: 80px;
+    width: 100%;
+}
+
+/* label */
+
+label.logo{
+
+    color: white;
+    font-size: 35px;     /* The size of the font inside the label called logo */
+    line-height: 80px;   /* The size of the line inside the label called logo set to 80px */
+    padding: 0 100px;
+    font-weight: bold ;
+
+}
+/* Unordered lis */
+nav ul{
+
+    float: right;    /* float basicall moves elements to the right or the left inside a content */
+    margin: right 20px;
+
+}
+/* Ordered list */
+
+nav ul li{
+
+    display: inline-block;  /* all the elements in ordered list will apper at the same line */
+    line-height: 80px;
+    margin: 0 5px ;             /* The space between the elements */
+
+
+}
+/* Refrences */
+
+nav ul li a {
+
+    color: white ;   /* all the reference color's is set to white */
+    font-size: 17px;
+    border-radius: 3px;
+    text-transform: uppercase;   /* All the lettes change to the uppercase */
+    padding: 7px 13px;
+   
+    
+}
+a.active,a:hover{
+
+    background: #1b9bff;    /* The background of the Home Changed to the blue */
+    transition: .5s;    /* The background of the other elemnes like ABout And others change to blue when we point on it by the mouse */
+
+}
+.check-btn{
+
+    font-size: 30px;
+    color: white;
+    float: right;                /* The fas fa-bar moves to the right */
+    line-height: 80px;
+    margin: right 40px;
+    cursor: pointer;      /*the cursor property in CSS is used to change the appearance of the mouse cursor when it hovers over an HTML element.*/
+    display: none;       /* fas fa-bar gets hide */
+
+}
+#check{
+
+    display: none;         /* The check-Box gets hide */
+
+}
+@media (max-width: 952px){
+
+    label.logo{
+
+        font-size: 30px;     /* The logo's content will get bigger 30px */ 
+        padding-left: 50px;  /* The logo's content moves to the left 50px*/  
+    }
+}
+nav ul li a{
+
+    font-size: 16px;      /* A link's content's font size will be 16px big */ 
+
+}
+@media(max-width: 858px){
+
+    .check-btn{
+        display: block;   /* fas far-icon gets hide whenevr we drag the page to other line */
+    }
+}
+ul{
+
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;    /* The full background's color change to this color */
+    top: 80px;
+    left: -100%;
+    text-align: center;      /* all the unordered items takes position in the center of the page */
+    transition: all .5s;
+
+}
+nav ul li{
+
+    display: block ;  /* All the elements in the list take position at the different line at top and bottom of the eachother */
+    margin: 50px 0;
+    line-height: 30px;
+}
+nav ul li a{
+
+    font-size: 20px;  /* All the a's refernces items contents get bigger 20px */
+
+}
+a:hover,a.active{
+
+    background: none;   /* The background of the Home element change to basic from blue. it will not have any background for it's own like past anymore. */
+    color: #0082e6;  /* all the elemtns in the list like Home,ABOUT etc wehenver we move mouse on them their color change to blue */
+
+
+}
+/* Whenever we drag the page all the list elements like Home etc gets hide but whenever we click on fas bar they get shown again */
+
+#check:checked  ~ ul{
+
+    left: 0%;
+}
+
+
